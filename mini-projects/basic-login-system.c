@@ -1,21 +1,27 @@
 #include <stdio.h>
+#include <string.h>
+
 int main (){
-    char user, pass;
+    char user[4], pass[5];
 
     printf("Digite o nome de usuario: ");
-    scanf("%c",&user);
+    scanf("%3s",user);
 
     printf("Digite a senha: ");
-    scanf(" %c",&pass);
+    scanf(" %4s",pass);
 
 
-    if (user == 'a')
-    if (pass == 'r')
+if (strcmp(user,"yan") == 0 && strcmp(pass,"tech") == 0){
 
-    printf("-------------------\nAcesso permitido.\n-------------------\nSeja bem vindo, %c!\n",user);
-    else if ((user != 'a' && pass == 'r'))
-    printf("Usuario não existe.\n");
-    else if ((user == 'a' && pass !='r'))
+
+    printf("-------------------\n");
+    printf("Acesso permitido.\n");
+    printf("-------------------\n");
+    printf("Seja bem vindo, %s!\n",user);
+}
+else if (strcmp(user, "yan") != 0)
+    printf("\nUsuario não existe.\n");
+else if (strcmp(pass, "tech") !=0)
     printf("Senha incorreta.\n");
 
     return 0;
